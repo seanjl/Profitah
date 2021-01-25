@@ -5,35 +5,37 @@
 }
 
 html {
-    background-color: #f1f3f6 !important;
+    background-color: #a5ff70 !important;
     scroll-behavior: smooth;
     font-family: 'Nunito Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #333333;
+    width: 100%;
+    height: 100%;
 }
 
 .navbar {
     width: 100%;
     height: auto;
-    padding: 0.5em 0 0.5em 0;
+    padding: 1em 0 1em 0;
     position: fixed !important;
     z-index: 999 !important;
-    background-color: #f7f7f7 !important;
-    box-shadow: 0px 0.01em 1px 1px #0000003b;
+    background: #93ee5f;
+    box-shadow: 0px 2px 6px #8cd95f;
 }
 
 .navtitle {
     display: block;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 700;
     text-align: center;
     margin: auto;
-    color: #228D57;
+    color: #072e75;
     text-decoration: none;
 }
 
-.container {
+.containerIndex {
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -42,23 +44,37 @@ html {
     padding: 30px;
 }
 
-.neumorphism-1 {
-    height: auto;
-    width: auto;
+h1 {
+    color: #072e75;
+}
+
+.container {
+    margin: auto;
+    padding-top: 5em;
     max-width: 700px;
-    background: #f1f3f6;
+    width: 90%;
+    padding-bottom: 5em;
+}
+
+.neumorphism-1 {
+    margin: auto;
+    height: auto;
+    width: 90%;
     padding: 1.5em;
-    border-radius: 20px;
-    box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, .15), -7px -7px 20px rgba(255, 255, 255, 1), inset 0px 0px 4px rgba(255, 255, 255, .2);
+    border-radius: 50px;
+    background: #a5ff70;
+    box-shadow: 20px 20px 60px #8cd95f, -20px -20px 60px #beff81;
 }
 
 .neumorphism-2 {
-    margin: 50px;
-    height: 250px;
-    width: 250px;
-    background: #dde1e7;
-    border-radius: 5px;
-    box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+    margin: auto;
+    height: auto;
+    width: 90%;
+    max-width: 620px;
+    padding: 1.5em;
+    border-radius: 50px;
+    background: #a5ff70;
+    box-shadow: 20px 20px 60px #8cd95f, -20px -20px 60px #beff81;
 }
 
 .input {
@@ -68,18 +84,23 @@ html {
     background-color: transparent;
     font-size: 18px;
     letter-spacing: 0.1em;
-    color: #61677C;
-    text-shadow: 1px 1px 0 #FFF;
-    padding: 12px;
+    color: #091747;
+    margin-top: 0.2em;
+    margin-right: 0.2em;
+    margin-left: 0.2em;
+    max-width: 50%;
+    padding: 0.5em;
     outline: none;
     border: none;
     border-radius: 30px;
-    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+    box-shadow: inset 2px 2px 5px #68b429, inset -5px -5px 10px #a5ff70;
     transition: all 0.2s ease-in-out;
 }
 
 .input:focus {
-    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+    width: 850%;
+    max-width: 85%;
+    box-shadow: inset 1px 1px 2px #3c7210, inset -1px -1px 2px #32740d;
 }
 
 .label {
@@ -92,6 +113,41 @@ html {
     margin-bottom: 8px;
 }
 
+.buttonindex {
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 6px 2em;
+    display: flex;
+    flex-direction: column;
+    background: #4b9221;
+    width: auto;
+    text-decoration: none;
+    color: #fff;
+    outline: none !important;
+    border: 0;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    font-family: 'Nunito Sans', sans-serif;
+    box-shadow: 0px 10px 15px #37aa4140;
+    transition: 0.3s;
+}
+
+.buttonindex:hover {
+    background: #336616;
+    box-shadow: -10px -10px -15px #52aa3740;
+}
+
+.buttonindex:active {
+    outline: none !important;
+}
+
+.buttonindex:focus {
+    outline: none !important;
+}
+
 .button {
     margin: auto;
     margin-top: 2em;
@@ -99,23 +155,32 @@ html {
     padding: 8px 2em;
     display: flex;
     flex-direction: column;
-    background: #9dabc0;
+    background: #4b9221;
     width: auto;
     height: 33px;
     text-decoration: none;
     color: #fff;
+    outline: none !important;
     border: 0;
     border-radius: 25px;
     font-weight: 700;
     font-size: 1em;
     font-family: 'Nunito Sans', sans-serif;
-    box-shadow: 0px 10px 15px rgba(55, 84, 170, .25);
+    box-shadow: 0px 10px 15px #37aa4140;
     transition: 0.3s;
 }
 
 .button:hover {
-    background: #727d8d;
-    box-shadow: -10px -10px -15px rgba(55, 84, 170, .25);
+    background: #336616;
+    box-shadow: -10px -10px -15px #52aa3740;
+}
+
+.button:active {
+    outline: none !important;
+}
+
+.button:focus {
+    outline: none !important;
 }
 
 p {
@@ -123,4 +188,15 @@ p {
     margin-top: 1em;
     line-height: 1.45em;
     width: 80%;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 1em;
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
 }

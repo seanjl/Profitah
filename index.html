@@ -24,66 +24,23 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <a class="navtitle" href="#main">Profitah</a>
-        </nav>
-    </header>
 
     <main>
-        <div class="container" id="main">
-            <div class="neumorphism-1">
-                <form id="form">
-                    <h3>¿Cuantas unidades quieres comprar?</h3>
-                    <input name="unitsBought" id="unitsBought" type="number" value="" class="input">
-                    <br><br>
+        <div class="containerIndex" id="main">
+            <div class="neumorphism-2" data-aos="flip-left">
+                <h1>Welcome to Profitah</h1>
+                <h2>Profitah is a simple profit calculator written in JavaScript</h2>
 
-                    <h3>¿A que precio compras cada unidad?</h3>
-                    <input name="priceUnitBought" id="priceUnitBought" type="number" value="" class="input">€
-                    <br><br>
+                <a href=" english.html " class="buttonindex ">English</a>
+                <a href="espanol.html " class="buttonindex ">Spanish</a>
 
-                    <h3>¿A que precio quieres vender la unidad?</h3>
-                    <input name="priceUnitSold" id="priceUnitSold" type="number" value="" class="input">€
-                    <br>
-
-                    <input type="button" value="calcular beneficio" onclick="doMath();" class="button">
-                    <br>
-
-                    <!-- Output -->
-                    <h3 id="output" class="output0"></h3>
-                    <p id="output1" class="output"></p>
-                    <p id="output2" class="output"></p>
-                    <p id="output3" class="output"></p>
-                    <p id="output4" class="output"></p>
-                    <p id="output5" class="output"></p>
-
-
-                    <script type="text/javascript">
-                        var $form = $("#form ");
-
-                        function doMath() {
-                            var unitsBought = document.getElementById('unitsBought').value;
-                            var priceUnitBought = document.getElementById('priceUnitBought').value;
-                            var totalCosts = priceUnitBought * unitsBought;
-                            var priceUnitSold = document.getElementById('priceUnitSold').value;
-                            var profitPerUnit = priceUnitSold - priceUnitBought;
-                            var totalRevenue = unitsBought * priceUnitSold;
-                            var netProfit = totalRevenue - totalCosts;
-                            var profitPercent = (netProfit / totalCosts) * 100;
-                            var profitMargin = (netProfit / totalRevenue) * 100;
-
-                            document.getElementById('output').innerHTML = "Resultados: ";
-                            document.getElementById('output1').innerHTML = "- Le vas a comprar al proveedor " + unitsBought + " unidades por " + totalCosts + "€";
-                            document.getElementById('output2').innerHTML = "- Por cada unidad que vendas vas a ganar " + profitPerUnit + "€ de beneficio";
-                            document.getElementById('output3').innerHTML = "- Si vendes las " + unitsBought + " unidades que has comprado, obtienes " + totalRevenue + "€ (" + netProfit + "€ de beneficio)";
-                            document.getElementById('output4').innerHTML = "- Obtienes un beneficio del " + profitPercent + "% con tu inversion de " + totalCosts + "€";
-                            document.getElementById('output5').innerHTML = "- El margen de beneficio es de " + profitMargin + "%";
-                        }
-                    </script>
-                </form>
             </div>
         </div>
     </main>
+
+    <footer>
+        <h5>Made by <a href="http://github.com/seanjl ">Sean Leitch</a></h5>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
 

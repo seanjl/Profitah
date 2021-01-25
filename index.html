@@ -19,7 +19,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
 </head>
 
@@ -31,30 +31,32 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="container" id="main">
             <div class="neumorphism-1">
                 <form id="form">
                     <h3>¿Cuantas unidades quieres comprar?</h3>
-                    <input name="unitsBought" id="unitsBought" type="number" value="">
+                    <input name="unitsBought" id="unitsBought" type="number" value="" class="input">
                     <br><br>
 
                     <h3>¿A que precio compras cada unidad?</h3>
-                    <input name="priceUnitBought" id="priceUnitBought" type="number" value="">€
+                    <input name="priceUnitBought" id="priceUnitBought" type="number" value="" class="input">€
                     <br><br>
 
                     <h3>¿A que precio quieres vender la unidad?</h3>
-                    <input name="priceUnitSold" id="priceUnitSold" type="number" value="">€
-                    <br><br>
+                    <input name="priceUnitSold" id="priceUnitSold" type="number" value="" class="input">€
+                    <br>
+
+                    <input type="button" value="calcular beneficio" onclick="doMath();" class="button">
+                    <br>
 
                     <!-- Output -->
-                    <h5 id="output" class="output0"></h5>
+                    <h3 id="output" class="output0"></h3>
                     <p id="output1" class="output"></p>
                     <p id="output2" class="output"></p>
                     <p id="output3" class="output"></p>
                     <p id="output4" class="output"></p>
                     <p id="output5" class="output"></p>
 
-                    <input type="button" value="Calcular Beneficio" onclick="doMath();" class="button">
 
                     <script type="text/javascript">
                         var $form = $("#form ");

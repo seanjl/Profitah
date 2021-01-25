@@ -30,11 +30,11 @@
                     <input name="unitsBought" id="unitsBought" type="number" value="" class="input">
                     <br><br>
 
-                    <h3>¿A que precio compras cada unidad?</h3>
+                    <h3>¿A qué precio compras cada unidad?</h3>
                     <input name="priceUnitBought" id="priceUnitBought" type="number" value="" class="input">€
                     <br><br>
 
-                    <h3>¿A que precio quieres vender la unidad?</h3>
+                    <h3>¿A qué precio quieres vender la unidad?</h3>
                     <input name="priceUnitSold" id="priceUnitSold" type="number" value="" class="input">€
                     <br>
 
@@ -61,14 +61,16 @@
                             var totalRevenue = unitsBought * priceUnitSold;
                             var netProfit = totalRevenue - totalCosts;
                             var profitPercent = (netProfit / totalCosts) * 100;
+                            var profitPercentFixed = profitPercent.toFixed(2);
                             var profitMargin = (netProfit / totalRevenue) * 100;
+                            var profitMarginFixed = profitMargin.toFixed(2);
 
                             document.getElementById('output').innerHTML = "Resultados: ";
                             document.getElementById('output1').innerHTML = "- Le vas a comprar al proveedor " + unitsBought + " unidades por " + totalCosts + "€";
                             document.getElementById('output2').innerHTML = "- Por cada unidad que vendas vas a ganar " + profitPerUnit + "€ de beneficio";
                             document.getElementById('output3').innerHTML = "- Si vendes las " + unitsBought + " unidades que has comprado, obtienes " + totalRevenue + "€ (" + netProfit + "€ de beneficio)";
-                            document.getElementById('output4').innerHTML = "- Obtienes un beneficio del " + profitPercent + "% con tu inversion de " + totalCosts + "€";
-                            document.getElementById('output5').innerHTML = "- El margen de beneficio es de " + profitMargin + "%";
+                            document.getElementById('output4').innerHTML = "- Obtienes un beneficio del " + profitPercentFixed + "% con tu inversion de " + totalCosts + "€";
+                            document.getElementById('output5').innerHTML = "- El margen de beneficio es de " + profitMarginFixed + "%";
                         }
                     </script>
                 </form>

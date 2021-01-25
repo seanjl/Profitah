@@ -25,16 +25,14 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg profitah-bg-nav profitah-accent-txt">
-            <a class="navbar-brand mx-auto navtitle" href="#main">Profitah</a>
+        <nav class="navbar">
+            <a class="navtitle" href="#main">Profitah</a>
         </nav>
     </header>
 
-    <main class="card-dashboard profitah-bg" id="main">
-        <br>
-        <div class="article-card" data-aos="fade-up">
-            <div class="card-dash-item-index">
-
+    <main>
+        <div class="container">
+            <div class="neumorphism-1">
                 <form id="form">
                     <h3>¿Cuantas unidades quieres comprar?</h3>
                     <input name="unitsBought" id="unitsBought" type="number" value="">
@@ -83,55 +81,13 @@
                 </form>
             </div>
         </div>
-        <br>
-
-
-
     </main>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
 
-    <script type="text/javascript ">
-        $(window).on('load', function() {
-            $('#exampleModalCenter').modal('show');
-        });
-    </script>
-
     <script>
         AOS.init();
     </script>
-
-    <script>
-        var mouseY = 0;
-        var startMouseY = 0;
-        $('main').on('mousedown', function(ev) {
-            mouseY = ev.pageY;
-            startMouseY = mouseY;
-            $(document).on('mousemove', function(e) {
-                if (e.pageY > mouseY) {
-                    var d = e.pageY - startMouseY;
-                    console.log("d: " + d);
-                    if (d >= 200) {
-                        location.reload();
-                        $('main').append($('<img/>').attr('src', 'https://www.mormota.ro/skin/frontend/default/polysoft/images/spinner.gif'));
-                    }
-                    $('main').css('margin-top', d / 4 + 'px');
-                } else
-                    $(document).unbind("mousemove ");
-
-
-            });
-        });
-        $('main').on('mouseup', function() {
-            $('main').css('margin-top', '0px');
-            $(document).unbind("mousemove ");
-        });
-        $('main').on('mouseleave', function() {
-            $('main').css('margin-top', '0px');
-            $(document).unbind("mousemove ");
-        });
-    </script>
-
 
 </body>
 

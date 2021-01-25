@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <!-- Site modified by Sean 2021-01-24 16:18 -->
+    <!-- Written by Sean Leitch, 25 Jan 2021 -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -22,12 +22,6 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <a class="navtitle" href="#main">Profitah</a>
-        </nav>
-    </header>
-
     <main>
         <div class="container" id="main" data-aos="flip-right">
             <div class="neumorphism-1">
@@ -44,7 +38,7 @@
                     $<input name="priceUnitSold" id="priceUnitSold" type="number" value="" class="input">
                     <br>
 
-                    <input type="button" value="calculate profit" onclick="doMath();" class="button">
+                    <input type="button" value="calculate profit" onclick="calcProfit();" class="button">
 
                     <!-- Output -->
                     <h3 id="output" class="output0"></h3>
@@ -56,9 +50,7 @@
 
 
                     <script type="text/javascript">
-                        var $form = $("#form ");
-
-                        function doMath() {
+                        function calcProfit() {
                             var unitsBought = document.getElementById('unitsBought').value;
                             var priceUnitBought = document.getElementById('priceUnitBought').value;
                             var totalCosts = priceUnitBought * unitsBought;
@@ -74,21 +66,20 @@
                             document.getElementById('output').innerHTML = "Results: ";
                             document.getElementById('output1').innerHTML = "- You bought " + unitsBought + " units for $" + totalCosts;
                             document.getElementById('output2').innerHTML = "- You will make $" + profitPerUnit + " in profit per item sold";
-                            document.getElementById('output3').innerHTML = "- If you sell all " + unitsBought + " units, you will make $" + totalRevenue + " (" + netProfit + " net profit)";
+                            document.getElementById('output3').innerHTML = "- If you sell all " + unitsBought + " units, you will make $" + totalRevenue + " ($" + netProfit + " net profit)";
                             document.getElementById('output4').innerHTML = "- You will make " + profitPercentFixed + "% profit on your $" + totalCosts + " investment";
                             document.getElementById('output5').innerHTML = "- Your profit margin will be " + profitMarginFixed + "%";
                         }
                     </script>
                 </form>
+
+                <hr>
+
+                <h5 class="footer"><a href=" index.html ">Home</a></h5>
+                <h5 class="footer ">Made by <a href="http://github.com/seanjl ">Sean Leitch</a></h5>
             </div>
         </div>
     </main>
-
-    <footer>
-        <h5><a href="index.html">Home</a></h5>
-        <br>
-        <h5>Made by <a href="http://github.com/seanjl">Sean Leitch</a></h5>
-    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
 

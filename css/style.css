@@ -15,6 +15,11 @@ html {
     height: 100%;
 }
 
+main {
+    margin: auto;
+    max-width: 720px;
+}
+
 .navbar {
     width: 100%;
     height: auto;
@@ -49,7 +54,6 @@ h1 {
 
 .container {
     margin: auto;
-    padding-top: 5em;
     max-width: 700px;
     padding-bottom: 5em;
     height: 100vh;
@@ -197,6 +201,13 @@ p {
     text-align: center;
     padding-top: 1em;
     text-decoration: none;
+}
+
+.home {
+    text-align: left;
+    text-decoration: none;
+    margin-left: 1em;
+    margin-top: 1em;
 }
 
 a:link,

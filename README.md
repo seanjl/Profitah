@@ -1,2 +1,2 @@
 # Profitah
-Simple business calculator made with JavaScript
+Simple profit calculator made with JavaScript
